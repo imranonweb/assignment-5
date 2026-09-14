@@ -42,6 +42,10 @@ const App: React.FC = () => {
     setStack((previousStack) => previousStack.filter((item) => item.id !== id));
   };
 
+  const handleRemoveAll = () => {
+    setStack([]);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-pink-100 selection:text-pink-600">
       <Navbar />
@@ -56,6 +60,7 @@ const App: React.FC = () => {
             <Sidebar
               stack={stack}
               handleRemoveFromStack={handleRemoveFromStack}
+              handleRemoveAll={handleRemoveAll}
             />
           }
         />

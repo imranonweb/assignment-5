@@ -5,7 +5,7 @@ import type { Technology } from '../types';
 export interface SidebarProps {
   stack: Technology[];
   handleRemoveFromStack: (id: string) => void;
-  handleRemoveAll?: () => void;
+  handleRemoveAll: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -29,21 +29,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </p>
           </div>
         </div>
-
-        {stack.length > 0 && handleRemoveAll && (
-          <button
-            type="button"
-            onClick={handleRemoveAll}
-            className="text-xs font-semibold text-rose-500 hover:text-rose-700 hover:bg-rose-50 px-2.5 py-1.5 rounded-lg transition-colors inline-flex items-center gap-1 focus:outline-none"
-            title="Remove all technologies"
-          >
-            <FiTrash2 className="w-3.5 h-3.5" />
-            Clear All
-          </button>
-        )}
       </div>
 
-      
       <div className="mt-5">
         {stack.length === 0 ? (
           <div className="py-10 px-4 text-center rounded-xl bg-slate-50/70 border border-dashed border-slate-200 flex flex-col items-center justify-center">
@@ -96,11 +83,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
         )}
       </div>
 
-      
       {stack.length > 0 && (
-        <div className="mt-5 pt-4 border-t border-slate-100 text-xs text-slate-500 flex items-center justify-between">
-          <span>Active build configuration</span>
-          <span className="font-semibold text-slate-700">Ready</span>
+        <div className="mt-5 pt-4 border-t border-slate-100">
+          <button
+            type="button"
+            onClick={handleRemoveAll}
+            className="w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-rose-600 bg-rose-50 hover:bg-rose-100 hover:text-rose-700 transition-colors flex items-center justify-center gap-2 border border-rose-200/80 focus:outline-none focus:ring-2 focus:ring-rose-400"
+          >
+            <FiTrash2 className="w-4 h-4" />
+            Remove All
+          </button>
         </div>
       )}
     </aside>

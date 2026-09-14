@@ -4,12 +4,12 @@ import { FiArrowRight, FiBookOpen } from 'react-icons/fi';
 export const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-12 sm:py-16 lg:py-24">
-      {/* Decorative background glow */}
+      
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-tr from-orange-200/40 via-pink-200/30 to-violet-200/40 blur-3xl rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Text Content */}
+          
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/60 text-xs font-semibold text-orange-600">
               <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
               Discover, curate, and assemble the ultimate software engineering toolkit for your next project. Tailor modern frontend libraries, backend runtimes, databases, and DevOps tools engineered for high productivity.
             </p>
 
-            {/* Action Buttons */}
+            
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
                 href="#technologies"
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Quick Feature Badges */}
+          
             <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 font-medium">
               <div className="flex items-center gap-1.5">
                 <span className="text-emerald-500 font-bold">✓</span> Curated Ecosystem
@@ -59,7 +59,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Banner Image */}
+          
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-full max-w-lg lg:max-w-none">
               <div className="overflow-hidden rounded-2xl bg-gradient-to-tr from-slate-100 to-white p-2 shadow-2xl shadow-slate-200/80 border border-slate-200/70">
