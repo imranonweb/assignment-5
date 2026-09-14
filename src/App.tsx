@@ -3,6 +3,7 @@ import type { Technology } from './types';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { MainLayout } from './components/MainLayout';
+import { Sidebar } from './components/Sidebar';
 
 const App: React.FC = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
@@ -37,6 +38,10 @@ const App: React.FC = () => {
     setStack((previousStack) => [...previousStack, tech]);
   };
 
+  const handleRemoveFromStack = (id: string) => {
+    setStack((previousStack) => previousStack.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-pink-100 selection:text-pink-600">
       <Navbar />
@@ -47,6 +52,12 @@ const App: React.FC = () => {
           loading={loading}
           stack={stack}
           handleAddToStack={handleAddToStack}
+          sidebar={
+            <Sidebar
+              stack={stack}
+              handleRemoveFromStack={handleRemoveFromStack}
+            />
+          }
         />
       </main>
     </div>
