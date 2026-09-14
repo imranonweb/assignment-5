@@ -30,11 +30,11 @@ export const Navbar: React.FC = () => {
 
           <div className="flex items-center">
             <a href="#" className="flex items-center gap-2">
-              <span className="w-7 h-7 rounded-md bg-pink-600 flex items-center justify-center text-white text-xs font-black tracking-tight shadow-sm">
+              <span className="w-7 h-7 rounded-md brand-gradient flex items-center justify-center text-white text-xs font-black tracking-tight shadow-sm">
                 DS
               </span>
               <span className="text-xl font-bold tracking-tight text-slate-900">
-                Dev<span className="text-pink-600">Stack</span>
+                Dev<span className="text-brand-gradient ml-0.5">Stack</span>
               </span>
             </a>
           </div>
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
             </button>
             <button
               type="button"
-              className="bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2"
+              className="brand-gradient hover:opacity-95 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2"
             >
               Sign Up
             </button>

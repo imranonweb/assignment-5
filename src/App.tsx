@@ -17,7 +17,10 @@ const App: React.FC = () => {
     const loadData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/data.json');
+        const [response] = await Promise.all([
+          fetch('/data.json'),
+          new Promise((resolve) => setTimeout(resolve, 600)),
+        ]);
         if (!response.ok) {
           throw new Error(`Failed to load data: ${response.statusText}`);
         }

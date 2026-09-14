@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,40 +8,43 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-2">
-              <span className="w-7 h-7 rounded-md bg-pink-600 flex items-center justify-center text-white text-xs font-black tracking-tight">
+              <span className="w-7 h-7 rounded-md brand-gradient flex items-center justify-center text-white text-xs font-black tracking-tight">
                 DS
               </span>
               <span className="text-xl font-bold tracking-tight text-slate-900">
-                Dev<span className="text-pink-600">Stack</span>
+                Dev<span className="text-brand-gradient ml-0.5">Stack</span>
               </span>
             </div>
             <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
               Curated tools, technologies, and resources for developers building modern software.
             </p>
-            <div className="flex items-center gap-4 pt-1 text-sm text-slate-700 font-medium">
+            <div className="flex items-center gap-5 pt-1 text-sm text-slate-600 font-medium">
               <a
                 href="https://github.com/imranonweb"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-600 transition-colors"
+                className="flex items-center gap-1.5 hover:text-slate-900 transition-colors"
               >
-                GitHub
+                <FaGithub className="w-4 h-4" />
+                <span>GitHub</span>
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-600 transition-colors"
+                className="flex items-center gap-1.5 hover:text-sky-500 transition-colors"
               >
-                Twitter
+                <FaTwitter className="w-4 h-4 text-sky-500" />
+                <span>Twitter</span>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-600 transition-colors"
+                className="flex items-center gap-1.5 hover:text-blue-600 transition-colors"
               >
-                LinkedIn
+                <FaLinkedin className="w-4 h-4 text-blue-600" />
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
